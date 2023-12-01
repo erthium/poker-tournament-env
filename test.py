@@ -46,4 +46,40 @@ Hand order from highest:
 1 - High Card
 """
 
+from agent import Agent, Move, Action
+
+def hand_point(hand: list[int]) -> int:
+    """
+    Connected pairs and check order:
+    1: Pair - Two Pair - Three of a kind - Four of a kind - Full House
+    2: Royal Flush - Straight Flush - Straight - Flush
+    3: High Card
+    """
+    pass
+
+
+class Game:
+    def __init__(self) -> None:
+        self.deck = [i for i in range(1, 53)]
+
+    def start_round(self):
+        pass
+
+    def next(self) -> int:
+        """
+        Return 0 if the game is not finished
+        """
+        pass
+
+
+class Table:
+    def __init__(self, list_of_agents: list[Agent]) -> None:
+        self.agents = list_of_agents
+        self.game = None
+
+    def start_game(self):
+        assert(self.game == None)
+        self.game = Game()
+        while self.game.next() == 0:
+            pass
 
